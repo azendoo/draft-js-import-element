@@ -437,7 +437,7 @@ function concatFragments(fragments: Array<TextFragment>): TextFragment {
     text = text + textFragment.text;
     characterMeta = characterMeta.concat(textFragment.characterMeta);
   });
-  return {text, characterMeta};
+  return {text, characterMeta: characterMeta.cacheResult()};
 }
 
 
